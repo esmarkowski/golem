@@ -1,0 +1,18 @@
+li.dropdown.notification-list.d-none.d-sm-inline-block
+    a.nav-link.dropdown-toggle.arrow-none aria-expanded="false" aria-haspopup="false" data-bs-toggle="dropdown" href="#" role="button" 
+      .noti-icon
+        .fa-regular.fa-grid-2
+    .dropdown-menu.dropdown-menu-end.dropdown-menu-animated.dropdown-lg.p-0
+      .p-2
+        .row.g-0
+          .col
+            =link_to 'https://app.clickup.com', class: 'dropdown-icon-item align-content-center', target: :blank do
+              = image_pack_tag 'logos/clickup.svg', class: 'flex-grow-1', style: 'height: 4em !important'
+              span Clickup
+
+          .col
+            =link_to 'https://drive.google.com', class: 'dropdown-icon-item align-content-center', target: :blank do
+              = image_pack_tag 'logos/google--color.svg', class: 'flex-grow-1 mt-2', style: 'height: 2.3em !important'
+              span.mt-2 G Suite
+
+        /! end row

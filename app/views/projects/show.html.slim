@@ -1,0 +1,17 @@
+p.text-success = notice
+.d-flex.justify-content-between
+  .d-flex
+    == render @project
+
+  .d-flex.gap-1
+    = link_to "Back to projects", projects_path, class: 'me-2'
+    div
+      = link_to edit_project_path(@project), class: "btn border-0 bg-light bg-secondary-hover" do 
+        i.mdi.mdi-lead-pencil
+
+    = button_to @project, method: :delete, class: "btn border-0 bg-light bg-danger-hover", data: { turbo_confirm: "Are you sure?" } do 
+      i.mdi.mdi-trash-can
+
+/ div.w-auto[data-controller="projects"]
+/   canvas#agent-graph width="1500" height="720"
+

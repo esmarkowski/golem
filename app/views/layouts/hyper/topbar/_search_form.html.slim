@@ -1,0 +1,12 @@
+/! Topbar Search Form
+div data-controller="hyper--search"
+  .app-search.dropdown
+    = simple_form_for :search, url: current_user.admin? ? admin_search_path : search_path, wrapper: :input_group, remote: true do |f|
+      .input-group
+        input#top-search.form-control.dropdown-toggle placeholder="Search..." type="search" name="search[q]"
+        span.mdi.mdi-magnify.search-icon
+        = f.submit 'Search', class: 'input-group-text btn btn-primary'
+      #search-dropdown.dropdown-menu.dropdown-menu-animated.dropdown-lg.dropdown-menu-end
+          p.dropdown-header.noti-title.text-muted
+            | Start typing to search...
+/! ========== Topbar End ==========

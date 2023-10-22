@@ -1,0 +1,5 @@
+Layout/ClosingHeredocIndentation:
+  Enabled: false
+
+Layout/EmptyLinesAroundModuleBody:
+  Enabled: false

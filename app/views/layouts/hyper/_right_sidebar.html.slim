@@ -1,0 +1,201 @@
+/! Theme Settings
+#theme-settings-offcanvas.offcanvas.offcanvas-end.border-0 tabindex="-1" 
+  .d-flex.align-items-center.bg-primary.p-3.offcanvas-header
+    h5.text-white.m-0 Time Sheet
+    button.btn-close.btn-close-white.ms-auto aria-label="Close" data-bs-dismiss="offcanvas" type="button" 
+
+  .offcanvas-body.p-0
+    .h-100 data-simplebar="" 
+      .card.mb-0.p-3
+        h5.mt-0.font-16.fw-bold.mb-3 Log Time
+        .row
+          .col-12
+            #color-range-heatmap
+
+      .card.mb-0.p-3
+      / [data-controller='timesheet-entry']
+        / = simple_form_for :timesheets do |f|
+        /   .row
+        /     = f.input :client, prompt: 'Select a client', 
+        /       label: false, 
+        /       collection: Account.all,
+        /       input_html: {id: 'client-select', class: 'form-select-sm form-select', data: {action: 'change->timesheet-entry#clientChanged', 'timesheet-entry-target': 'client'}}
+        /   .row
+        /     .col-7
+        /       = f.input :service, prompt: 'Select a service', label: false, collection: ProductFamily.all, input_html: {class: '' } 
+        /     .col-5
+        /       .input-group
+        /         = f.input :hours_spent, placeholder: '0.0', label: false, wrapper: false
+        /         button.btn.btn-secondary.dropdown-toggle type="button" data-bs-toggle="dropdown" aria-expanded="false" 
+        /           .fa-duotone.fa-hourglass-clock.me-1
+        /         div.dropdown-menu.dropdown-menu-end
+        /             a.dropdown-item href="#" 
+        /                 .fa-duotone.fa-play-pause.me-1
+        /                 | Start/Stop Timer
+        /             .dropdown-divider
+        /             a.dropdown-item href="#" 
+        /                 .fa-duotone.fa-clock-three.me-1
+        /                 | Add 30 minutes
+        /   .row
+        /     .col-12
+        /       = f.input :activity, label: false, prompt: 'Select an activity', as: :grouped_select, group_method: :last, collection: {billing: [:billable, :fixed_fee, :non_billable], internal: [ :training, :meeting, :quoting, :quality_control, :out_of_scope], external: [:out_of_scope, :meeting]}, input_html: {class: 'form-control-sm select2', multiple: true}
+
+        /   .row
+        /     .col-12
+        /       = f.input :notes, as: :text, label: false, input_html: {class: 'form-control-sm', rows: 3, placeholder: 'Notes'}
+
+
+
+  .offcanvas-footer.border-top.p-3.text-center
+    .row
+      .col-6
+        button#reset-layout.btn.btn-light.w-100 type="button"  Reset
+      .col-6
+        button.btn.btn-primary.w-100 type="button"  Log Time
+
+javascript:
+  $(document).ready(function() {
+    function generateData(count, yrange) {
+    var i = 0;
+    var series = [];
+    while (i < count) {
+        var x = (i + 1).toString();
+        var y = Math.floor(Math.random() * (yrange.max - yrange.min + 1)) + yrange.min;
+
+        series.push({
+            x: x,
+            y: y
+        });
+        i++;
+    }
+    return series;
+    }
+    var colors = ["#fa6767","#f9bc0d","#44badc","#42d29d"];
+    var dataColors = $("#color-range-heatmap").data('colors');
+    if (dataColors) {
+        colors = dataColors.split(",");
+    }
+    var options = {
+    chart: {
+        height: 230,
+        type: 'heatmap',
+    },
+    plotOptions: {
+        heatmap: {
+            shadeIntensity: 0.5,
+
+            colorScale: {
+                ranges: [{
+                        from: -30,
+                        to: 5,
+                        name: 'Low',
+                        color: colors[0]
+                    },
+                    {
+                        from: 6,
+                        to: 20,
+                        name: 'Medium',
+                        color: colors[1]
+                    },
+                    {
+                        from: 21,
+                        to: 45,
+                        name: 'High',
+                        color: colors[2]
+                    },
+                    {
+                        from: 46,
+                        to: 55,
+                        name: 'Extreme',
+                        color: colors[3]
+                    }
+                ]
+            }
+        }
+    },
+    tooltip: {
+      custom: function({series, seriesIndex, dataPointIndex, w}) {
+        return '<div class="arrow_box px-2">' +
+          '<span>' + w.globals.seriesNames[seriesIndex] + '</span>' +
+          '<span> ' + w.globals.labels[dataPointIndex] + '</span> - ' +
+          '<span>' + series[seriesIndex][dataPointIndex] + '</span> hours' +
+          '</div>'
+      }
+    },
+    dataLabels: {
+        enabled: false
+    },
+    series: [{
+            name: 'Jan',
+            data: generateData(20, {
+                min: 0,
+                max: 55
+            })
+        },
+        {
+            name: 'Feb',
+            data: generateData(20, {
+                min: 0,
+                max: 55
+            })
+        },
+        {
+            name: 'Mar',
+            data: generateData(20, {
+                min: 0,
+                max: 55
+            })
+        },
+        {
+            name: 'Apr',
+            data: generateData(20, {
+                min: 0,
+                max: 55
+            })
+        },
+        {
+            name: 'May',
+            data: generateData(20, {
+                min: 0,
+                max: 55
+            })
+        },
+        {
+            name: 'Jun',
+            data: generateData(20, {
+                min: 0,
+                max: 55
+            })
+        },
+        {
+            name: 'Jul',
+            data: generateData(20, {
+                min: 0,
+                max: 55
+            })
+        },
+        {
+            name: 'Aug',
+            data: generateData(20, {
+                min: 0,
+                max: 55
+            })
+        },
+        {
+            name: 'Sep',
+            data: generateData(20, {
+                min: 0,
+                max: 55
+            })
+        }
+    ],
+
+    }
+
+    var chart = new ApexCharts(
+    document.querySelector("#color-range-heatmap"),
+    options
+    );
+
+    chart.render();
+  });

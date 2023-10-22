@@ -1,0 +1,10 @@
+/! start page title
+.row
+  .col-12
+    .page-title-box.d-flex.justify-content-between.align-items-end.pt-2.mb-2
+      div.align-self-start
+        h3=content_for?(:page_title) ? yield(:page_title) : t('.title')
+      div.mb-1
+        =content_for?(:page_actions) ? yield(:page_actions) : render('layouts/hyper/pages/breadcrumb')
+/! end page title
+

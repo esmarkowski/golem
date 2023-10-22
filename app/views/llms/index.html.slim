@@ -1,0 +1,11 @@
+p style="color: green" = notice
+
+h1 LLMs
+
+#llms
+  - @llms.each do |llm|
+    == render llm
+    p
+      = link_to "Show this llm", llm
+
+= link_to "New llm", new_llm_path

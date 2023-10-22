@@ -1,0 +1,96 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+:root {
+    --ct-blue: #3d73dd;
+    --ct-indigo: #727cf5;
+    --ct-purple: #536de6;
+    --ct-pink: #ff679b;
+    --ct-red: #ff5b5b;
+    --ct-orange: #fd7e14;
+    --ct-yellow: #f9c851;
+    --ct-green: #10c469;
+    --ct-teal: #02a8b5;
+    --ct-cyan: #35b8e0;
+    --ct-white: #fff;
+    --ct-gray: #8a969c;
+    --ct-gray-dark: #343a40;
+    --ct-gray-100: #f6f7fb;
+    --ct-gray-200: #eef2f7;
+    --ct-gray-300: #dee2e6;
+    --ct-gray-400: #ced4da;
+    --ct-gray-500: #a1a9b1;
+    --ct-gray-600: #8a969c;
+    --ct-gray-700: #6c757d;
+    --ct-gray-800: #343a40;
+    --ct-gray-900: #313a46;
+    --ct-primary: #536de6;
+    --ct-secondary: #6c757d;
+    --ct-success: #10c469;
+    --ct-info: #35b8e0;
+    --ct-warning: #f9c851;
+    --ct-danger: #ff5b5b;
+    --ct-light: #eef2f7;
+    --ct-dark: #313a46;
+    --ct-error: #ff5b5b;
+    --ct-primary-rgb: 83, 109, 230;
+    --ct-secondary-rgb: 108, 117, 125;
+    --ct-success-rgb: 16, 196, 105;
+    --ct-info-rgb: 53, 184, 224;
+    --ct-warning-rgb: 249, 200, 81;
+    --ct-danger-rgb: 255, 91, 91;
+    --ct-light-rgb: 238, 242, 247;
+    --ct-dark-rgb: 49, 58, 70;
+    --ct-error-rgb: 255, 91, 91;
+    --ct-white-rgb: 255, 255, 255;
+    --ct-black-rgb: 0, 0, 0;
+    --ct-body-color-rgb: 108, 117, 125;
+    --ct-body-bg-rgb: 250, 251, 254;
+    --ct-font-sans-serif: "Nunito", sans-serif;
+    --ct-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --ct-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+    --ct-body-font-family: Nunito, sans-serif;
+    --ct-body-font-size: 0.9rem;
+    --ct-body-font-weight: 400;
+    --ct-body-line-height: 1.5;
+    --ct-body-color: #6c757d;
+    --ct-body-bg: #fafbfe;
+    --ct-border-width: 1px;
+    --ct-border-style: solid;
+    --ct-border-color: #dee2e6;
+    --ct-border-color-translucent: rgba(0, 0, 0, 0.175);
+    --ct-border-radius: 0.25rem;
+    --ct-border-radius-sm: 0.2rem;
+    --ct-border-radius-lg: 0.3rem;
+    --ct-border-radius-xl: 1rem;
+    --ct-border-radius-2xl: 2rem;
+    --ct-border-radius-pill: 50rem;
+    --ct-link-color: #536de6;
+    --ct-link-hover-color: #475dc4;
+    --ct-code-color: #35b8e0;
+    --ct-highlight-bg: var(--ct-mark-bg);
+    --ct-badge-padding-x: 0.4em;
+    --ct-badge-padding-y: 0.25em;
+    --ct-badge-font-size: 0.75em;
+    --ct-badge-font-weight: 700;
+    --ct-badge-color: #fff;
+    --ct-badge-border-radius: 0.25rem;
+}
+
+@import "bootstrap";
+@import "litegraph";
+@import "app-modern.scss";
+@import "choices.scss";
+@import "hover-utils.scss";

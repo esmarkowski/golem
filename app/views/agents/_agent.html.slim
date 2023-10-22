@@ -1,0 +1,30 @@
+.card.col-6 id="#{dom_id agent}"
+    .card-body
+      .d-flex.justify-content-between
+        .d-flex
+          h3.card-title = agent.name
+
+        .d-flex
+          = link_to edit_agent_path(agent), class: "" do 
+            i.mdi.mdi-lead-pencil
+
+      .d-flex
+        .card.flex-fill 
+          .card-body
+            h4.card-title
+              | Persona
+            .card-text
+              = agent.identity
+        
+      .d-flex
+        .card.flex-fill
+          .card-body
+            h4.card-title
+              | Conventions
+            div data-controller="choices"
+              = select_tag "convention", options_from_collection_for_select(Golems::Convention.conventions, :id, :name, agent.conventions.pluck(:name).map { |d| d.parameterize.underscore }), 
+                class: "form-control",
+                multiple: true, 
+                data: { choices_target: 'select', action: "change->choices#select" }
+
+

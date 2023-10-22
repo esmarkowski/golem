@@ -1,0 +1,31 @@
+= simple_form_for(@agent) do |form|
+  - if @agent.errors.any?
+    div style="color: red"
+      h2 = "#{pluralize(@agent.errors.count, "error")} prohibited this agent from being saved:"
+      ul
+        - @agent.errors.each do |error|
+          li = error.full_message
+
+  div
+    = form.input :name
+    = form.input :identity
+    = form.input :personality
+    = form.input :responsibilities
+    = form.input :output
+    / = form.input :llm
+    div data-controller="choices"
+      = form.association :conventions,
+        as: :select,
+        collection: Golems::Convention.conventions,
+        label: false,
+        input_html: { multiple: true, data: { placeholder: "Select Conventions", choices_target: 'select', action: "change->choices#select" }}
+
+        / data: { choices_target: 'select', action: "change->choices#select" }
+      / = select_tag "convention", options_from_collection_for_select(Golems::Convention.conventions, :id, :name, @agent.conventions.pluck(:name).map { |d| d.parameterize.underscore }), 
+      /   class: "form-control",
+      /   multiple: true, 
+    /   /   data: { choices_target: 'select', action: "change->choices#select" }
+    / = form.association :conventions, as: :check_boxes, collection: Golems::Convention.conventions
+
+  div
+    = form.submit

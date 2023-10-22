@@ -1,0 +1,12 @@
+.card.text-white.bg-danger.overflow-hidden.mt-4
+  .card-body
+    .callout.text-center
+      .d-flex.justify-content-center
+        .col-8
+          h4.mt-4
+            i.fa-duotone.fa-money-check-dollar-pen.fa-rotate-by.fa-5x.position-absolute style="--fa-primary-opacity: 0.5; --fa-secondary-opacity: 0.2; --fa-rotate-angle: -30deg; bottom:-5px; left: -10px"
+            = "Frank's Big Hot Dogs is qualified for up to <strong class='text-dark'>$150,000</strong> in capital loans from National Business Capital".html_safe
+        .col-2
+          = image_tag asset_pack_path('media/images/logos/national-business-capital.png'), class: 'img-fluid', style: 'max-width: 200px; margin: 0 auto;'
+          .d-grid.d-block.mt-2
+            = link_to "Learn More", "https://www.nationalbusinesscapital.com/partner/?ref=91147", class: "btn btn-primary btn-sm btn-block", target: "_blank"

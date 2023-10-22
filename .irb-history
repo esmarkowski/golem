@@ -1,0 +1,786 @@
+Project
+Project.first
+Agent.first
+Agent.first
+Agent
+LLM
+exit
+client = OpenAI::Client.new
+client.models.list
+models = client.models.list
+models.keys
+models.first
+models
+models
+models.keys
+models["object"]
+models["object"]["list"]
+models["data"]
+models["data"].first
+models["data"].map { |d| d["id"] }
+models["data"].map { |d| d["id"] }.sort
+client.chat(\
+    parameters: {\
+        model: "gpt-3.5-turbo", # Required.\
+        messages: [{ role: "user", content: "Reply with test"}], # Required.\
+        temperature: 0.7,\
+        stream: proc do |chunk, _bytesize|\
+            print chunk.dig("choices", 0, "delta", "content")\
+        end\
+    })
+response = client.chat(\
+    parameters: {\
+        model: "gpt-3.5-turbo", # Required.\
+        messages: [{ role: "user", content: "Reply with test"}], # Required.\
+        temperature: 0.7,\
+        stream: proc do |chunk, _bytesize|\
+            print chunk.dig("choices", 0, "delta", "content")\
+        end\
+    })
+response
+response = client.chat(\
+    parameters: {\
+        model: "gpt-3.5-turbo", # Required.\
+        messages: [{ role: "user", content: "Reply with the word test. Only reply with the single word test."}], # Required.\
+        temperature: 0.7,\
+    })
+response
+exit
+client = OpenAI::Client.new
+response = client.chat(\
+    parameters: {\
+        model: "gpt-3.5-turbo", # Required.\
+        messages: [{ role: "user", content: "Reply with the word test. Only reply with the single word test."}], # Required.\
+        temperature: 0.7,\
+    })
+ap response
+reload!
+Message
+m = Message.new(:system, "You are a ruby coder")
+m.role
+m.system?
+reload!
+m = Message.new(:system, "You are a ruby coder")
+m.system?
+reload!
+m = Message.new(:system, "You are a ruby coder")
+m.system?
+m.methods - Object.methods
+reload!
+m = Message.new(:system, "You are a ruby coder")
+m.role
+m.system
+m.system?
+reload!
+m = Message.new(:system, "You are a ruby coder")
+m.system?
+m.user?
+reload!
+m = Message.new(:system, "You are a ruby coder")
+m.system?
+reload!
+m = Message.new(:system, "You are a ruby coder")
+m.system?
+m.user?
+m.user?
+Programmer
+require 'golems/engineering/programmer'
+require "#{Rails.root}/golems/engineering/programmer"
+require "#{Rails.root}/app/golems/engineering/programmer"
+reload!
+require "#{Rails.root}/app/golems/engineering/programmer"
+reload!
+require "#{Rails.root}/app/golems/engineering/programmer"
+Golem
+
+require "#{Rails.root}/app/golems/engineering/programmer"
+Programmer
+Programmer.new
+prg = Programmer.new
+prg.identity
+prg
+ap prg
+reload!
+reload!
+prg = Programmer.new
+prg.identity
+exit
+prg = Programmer.new
+require "#{Rails.root}/app/golems/engineering/programmer"
+require "#{Rails.root}/app/golems/engineering/programmer"
+prg = Programmer.new
+prg.identity
+exit
+require "#{Rails.root}/app/golems/engineering/programmer"
+exit
+require "#{Rails.root}/app/golems/engineering/programmer"
+require "#{Rails.root}/app/golems/engineering/programmer"
+reload!
+require "#{Rails.root}/app/golems/engineering/programmer"
+reload!
+require "#{Rails.root}/app/golems/engineering/programmer"
+reload!
+require "#{Rails.root}/app/golems/engineering/programmer"
+reload!
+require "#{Rails.root}/app/golems/engineering/programmer"
+reload!
+require "#{Rails.root}/app/golems/engineering/programmer"
+prg = Programmer.new
+prg.identity
+reload!
+require "#{Rails.root}/app/golems/engineering/programmer"
+prg = Programmer.new
+prg.identity
+reload!
+require "#{Rails.root}/app/golems/engineering/programmer"
+prg = Programmer.new
+prg.identity
+exit
+require "#{Rails.root}/app/golems/engineering/programmer"
+prg = Programmer.new
+prg = Programmer.new
+Programmer
+Golems::Programmer
+Golems::Programmer.new
+Golems::Programmer.new.identity
+Golems::Programmer.new._identity
+Golems::Programmer.new.identity
+reload!
+Golems::Programmer.new.identity
+reload!
+Golems::Programmer.new.identity
+exit
+require "#{Rails.root}/app/golems/engineering/programmer"
+Golems::Programmer.new.identity
+Golems::Programmer.new._identity
+exit
+Golems::Programmer.new.identity
+Golems::Programmer.new.identity
+require "#{Rails.root}/app/golems/engineering/programmer"
+Golems::Programmer.new.identity
+Golems::Programmer.new.identity
+reload!
+require "#{Rails.root}/app/golems/engineering/programmer"
+Golems::Programmer.new.identity
+exit
+require "#{Rails.root}/app/golems/engineering/programmer"
+Golems::Programmer.new.identity
+Golems::Programmer.new._identity
+Golems::Programmer.new.identity
+exit
+require "#{Rails.root}/app/golems/engineering/programmer"
+exit
+require "#{Rails.root}/app/golems/engineering/programmer"
+exit
+require "#{Rails.root}/app/golems/engineering/programmer"
+Golems::Programmer.new.identity
+Golems::Programmer.new.identity
+exit
+require "#{Rails.root}/app/golems/engineering/programmer"
+Golems::Programmer.new.identity
+Golems::Programmer.new.identity
+reload!
+require "#{Rails.root}/app/golems/engineering/programmer"
+Golems::Programmer.new.identity
+exit
+require "#{Rails.root}/app/golems/engineering/programmer"
+Golems::Programmer.new.identity
+exit
+Golems::Programmer.new.identity
+exit
+Golems::Programmer.new.identity
+Golems
+exit
+Golems
+exit
+Golems
+Golems::Engineering::Programmer
+exit
+Golems::Engineering::Programmer
+Golems::Engineering::Programmer
+reload!
+Golems::Engineering::Programmer
+Golems::Engineering::Programmer.identity
+pr = Golems::Engineering::Programmer
+pr.identity
+reload!
+pr = Golems::Engineering::Programmer
+pr.identity
+reload!
+pr = Golems::Engineering::CodeReviewer
+reload!
+pr = Golems::Engineering::CodeReviewer
+pr.identity
+pr = Golems::Engineering::Programmer.identity
+pr = Golems::Engineering::Programmer.new
+pr.identity
+exit
+YAML.open("#{Rails.root}/lib/golems/conventions/engineering.yml")
+YAML.read("#{Rails.root}/lib/golems/conventions/engineering.yml")
+YAML.load("#{Rails.root}/lib/golems/conventions/engineering.yml")
+YAML.load(File.open("#{Rails.root}/lib/golems/conventions/engineering.yml"))
+conventions = YAML.load(File.open("#{Rails.root}/lib/golems/conventions/engineering.yml"))
+conventions.map(&:first)
+ap conventions.map(&:first)
+conventions.map(&:first)
+ap conventions
+conventions.map(&:first)
+reload!
+Golems::Conventions
+Golems::Convention
+Golems::Convention.conventions
+reload!
+Golems::Convention.conventions
+reload!
+Golems::Convention.conventions
+reload!
+Golems::Convention.conventions
+reload!
+Golems::Convention.conventions
+Golems::Convention.conventions
+Golems::Convention.conventions
+reload!
+Golems::Convention.conventions
+exit
+Golems::Convention.conventions
+reload!
+Golems::Convention.conventions
+reload!
+Golems::Convention.conventions
+Golems::Convention.conventions
+reload!
+Golems::Convention.conventions
+reload!
+Golems::Convention.conventions
+reload!
+Golems::Convention.conventions
+Golems::Convention.conventions
+exit
+Golems::Convention.conventions
+Golems::Convention.conventions
+reload!
+Golems::Convention.conventions
+reload!
+Golems::Convention.conventions
+exit
+Golems::Convention.conventions
+reload!
+Golems::Convention.conventions
+reload!
+Golems::Convention.conventions
+Golems::Convention.conventions.first
+reload!
+Golems::Convention.conventions.first
+Golems::Convention.conventions
+Golems::Convention.conventions.first
+Golems::Convention.conventions.first.name
+Golems::Convention.conventions.first.rules
+reload!
+Golems::Convention.conventions.first.to_prompt
+Golems::Convention.conventions.first
+Golems::Convention.conventions.first.to_prompt
+ap Golems::Convention.conventions.first.to_prompt
+pp Golems::Convention.conventions.first.to_prompt
+ap Golems::Convention.conventions.first.to_prompt
+print Golems::Convention.conventions.first.to_prompt
+puts Golems::Convention.conventions.first.to_prompt
+p Golems::Convention.conventions.first.to_prompt
+puts Golems::Convention.conventions.first.to_prompt
+p Golems::Convention.conventions.first.to_prompt
+puts Golems::Convention.conventions.first.to_prompt
+reload!
+puts Golems::Convention.conventions.first.to_prompt
+puts Golems::Convention.conventions.first.to_prompt
+puts Golems::Convention.conventions.first.rules
+rules = puts Golems::Convention.conventions.first.rules
+rules
+rules = Golems::Convention.conventions.first.rules
+rules
+rules.map { |d| "- #{d}" }
+rules.map { |d| "- #{d}" }.join("\n")
+puts rules.map { |d| "- #{d}" }.join("\n")
+reload!
+puts Golems::Convention.conventions.first.to_prompt
+puts Golems::Convention.conventions.first.to_prompt
+reload!
+puts Golems::Convention.conventions.first.to_prompt
+reload!
+puts Golems::Convention.conventions.first.to_prompt
+puts Golems::Convention.conventions
+reload!
+puts Golems::Convention.conventions
+puts Golems::Convention.conventions
+exit
+puts Golems::Convention.conventions
+puts Golems::Convention.conventions
+puts Golems::Convention.conventions << ["goat"]
+reload!
+puts Golems::Convention.conventions
+reload!
+puts Golems::Convention.conventions
+reload!
+puts Golems::Convention.conventions
+reload!
+puts Golems::Convention.conventions
+puts Golems::Convention.conventions
+reload!
+puts Golems::Convention.conventions
+puts Golems::Convention.conventions
+exit
+puts Golems::Convention.conventions
+reload!
+puts Golems::Convention.conventions
+puts Golems::Convention.conventions
+reload!
+puts Golems::Convention.conventions
+exit
+puts Golems::Convention.conventions
+puts Golems::Convention.conventions.first
+ Golems::Convention.conventions.first
+p Golems::Convention.conventions.first
+ap Golems::Convention.conventions.first
+ap Golems::Convention.conventions.first
+reload!
+ap Golems::Convention.conventions.first
+reload!
+Agent
+agent = Agent.new
+Agent.new
+reload!
+Agent.new
+engineer = Agent.new(name: "Engineer")
+engineer
+reload!
+engineer = Agent.new(name: "Engineer")
+engineer.conventions
+exit
+engineer = Agent.new(name: "Engineer")
+engineer.conventions
+reload!
+engineer = Agent.new(name: "Engineer")
+engineer.conventions
+engineer.conventions.build
+engineer.conventions.build(name: Golem::Convention.conventions.first.name)
+engineer.conventions.build(name: Golems::Convention.conventions.first.name)
+engineer.conventions.create(name: Golems::Convention.conventions.first.name)
+c= engineer.conventions.build(name: Golems::Convention.conventions.first.name)
+c.save
+engineer.save
+engineer.errors
+c= engineer.conventions.build(name: Golems::Convention.conventions.first.name)
+c.save
+engineer.id
+engineer.save
+reload!
+engineer = Agent.new(name: "Engineer")
+c= engineer.conventions.build(name: Golems::Convention.conventions.first.name)
+engineer.save
+reload!
+engineer = Agent.new(name: "Engineer")
+c= engineer.conventions.build(name: Golems::Convention.conventions.first.name)
+engineer.save
+exit
+engineer = Agent.new(name: "Engineer")
+engineer.save
+c= engineer.conventions.build(name: Golems::Convention.conventions.first.name)
+c.save
+engineer.conventions
+c= engineer.conventions.build(name: Golems::Convention.conventions.last.name)
+c.save
+engineer.conventions
+reload!
+engineer.conventions
+engineer.conventions.first
+engineer.conventions.first.rules
+engineer.conventions.first.rules
+reload!
+engineer = Engineer.last
+engineer = Agent.last
+engineer.conventions.first.rules
+reload!
+engineer = Engineer.last
+engineer = Agent.last
+engineer.conventions.first.rules
+reload!
+engineer = Agent.last
+engineer.conventions.first.rules
+reload!
+engineer = Agent.last
+engineer.conventions.first.rules
+engineer.conventions.first
+engineer.conventions.first.definition
+engineer.conventions.first.definition.to_prompt
+ap engineer.conventions.first.definition.to_prompt
+p engineer.conventions.first.definition.to_prompt
+puts engineer.conventions.first.definition.to_prompt
+engineer
+reload!
+engineer = Agent.last
+engineer.to_s
+reload!
+engineer = Agent.last
+engineer.to_s
+puts engineer.to_s
+reload!
+engineer = Agent.last
+engine
+engineer = Agent.last
+engineer.update(identity: "You are an engineer. You write code to meet the requirements given by the Architect")
+puts engineer.to_s
+reload!
+puts engineer.to_s
+engineer = Agent.last
+puts engineer.to_s
+engineer
+reload!
+engineer = Agent.last
+puts engineer.to_s
+reload!
+engineer = Agent.last
+engineer.to_s
+puts engineer.to_s
+engineer.task = "Write a ruby method that will list all files in #{Rails.root}/lib/golems/conventions/"
+engineer.to_s
+puts engineer.to_s
+engineer.task
+reload!
+engineer = Agent.last
+engineer.task = "Write a ruby method that will list all files in #{Rails.root}/lib/golems/conventions/"
+puts engineer.to_s
+engineer.conventions
+engineer.conventions.last.destroy
+engineer.conventions
+engineer.conventions.last
+engineer.conventions.last.delete
+engineer.conventions
+reload!
+engineer = Agent.last
+engineer.conventions
+Golem::Conventions.conventions
+Golems::Conventions.conventions
+Golems::Convention.conventions
+Golems::Convention.conventions.keys
+Golems::Convention.conventions
+Golems::Convention.conventions
+reload!
+Golems::Convention.names
+[ "engineering/Language/Ruby", "engineering/OnlySingleCodeBlock"].each { |c| engineer.conventions.create(name: c) }
+engineer.conventions
+engineer.to_s
+puts engineer.to_s
+puts engineer.to_s
+reload!
+engineer = Agent.last
+puts engineer.to_s
+response = engineer.chat("Write a ruby method that will list all files in /Users/spencer/projects/cohort/lib/golems/conventions/")
+reload!
+engineer = Agent.last
+response = engineer.chat("Write a ruby method that will list all files in /Users/spencer/projects/cohort/lib/golems/conventions/")
+reload!
+engineer = Agent.last
+response = engineer.chat("Write a ruby method that will list all files in /Users/spencer/projects/cohort/lib/golems/conventions/")
+reload!
+engineer = Agent.last
+response = engineer.chat("Write a ruby method that will list all files in /Users/spencer/projects/cohort/lib/golems/conventions/")
+response
+response.first
+response.first["choices"]
+response.first["choices"].first
+response.first["choices"].first["message"]
+response.first["choices"].first["message"]["content"]
+puts response.first["choices"].first["message"]["content"]
+reload!
+reload!
+engineer = Agent.last
+response = engineer.chat("Write a ruby method that will list all files in /Users/spencer/projects/cohort/lib/golems/conventions/")
+response
+puts response
+puts response.gsub(/```.*```/m, "")
+puts response.gsub(/```.*$```/m, "")
+puts response.gsub(/```.*$/m, "")
+puts response.gsub(/```.*$/, "")
+puts response.gsub(/```.*$/, "")
+code = response.gsub(/```.*$/, "")
+eval(code)
+list_files("/Users/spencer/projects/cohort/lib/golems/conventions/")
+ap list_files("/Users/spencer/projects/cohort/lib/golems/conventions/")
+reload!
+engineer = Agent.last
+response = engineer.chat("Write a ruby method that will list all files in /Users/spencer/projects/cohort/lib/golems/conventions/")
+puts response
+engineer.unsafe_eval(response)
+engineer.conventions
+engineer
+engineer.to_s
+engineer.conventions
+puts engineer.to_s
+engineer= Agent.last
+engineer.conventions
+puts engineer.to_s
+engineer.conventions
+engineer
+engineer.conventions
+response = engineer.chat("Write a ruby method that will list all files in /Users/spencer/projects/cohort/lib/golems/conventions/")
+engineer.unsafe_eval(response)
+response = engineer.chat("Write a ruby method that will list all files in /Users/spencer/projects/cohort/lib/golems/conventions/")
+response = engineer.chat("Write a ruby method that will list all files in /Users/spencer/projects/cohort/lib/golems/conventions/")
+response = engineer.chat("Write a ruby method that will list all files in /Users/spencer/projects/cohort/lib/golems/conventions/")
+response = engineer.chat("Write a ruby method that will list all files in /Users/spencer/projects/cohort/lib/golems/conventions/")
+reload!
+engineer= Agent.last
+engineer
+engineer.conventions
+response = engineer.chat("Write a ruby method that will list all files in /Users/spencer/projects/cohort/lib/golems/conventions/")
+engineer.unsafe_eval(response)
+list_files
+puts response
+list_files
+engineer.unsafe_eval(response)
+list_files
+list_files ''
+list_files
+response = engineer.chat("Write a ruby method that will list all files in /Users/spencer/projects/cohort/lib/golems/conventions/"); puts response
+engineer.unsafe_eval(response)
+list_files_in_directory "/Users/spencer/projects/cohort/lib/golems/conventions/"
+list_files_in_directory
+:list_files_in_directory
+list_files_in_directory
+list_files_in_directory
+eval
+engineer.unsafe_eval(response)
+list_files_in_directory
+def list_files_in_directory(directory)\
+  Dir.entries(directory)\
+end
+list_files_in_directory(""/Users/spencer/projects/cohort/lib/golems/conventions/")
+list_files_in_directory("/Users/spencer/projects/cohort/lib/golems/conventions/")
+response = engineer.chat("Write a ruby method that will list all files in /Users/spencer/projects/cohort/lib/golems/conventions/"); puts response
+engineer.unsafe_eval response
+list_files
+list_files nil
+list_files '/Users/spencer/projects/cohort/lib/golems/conventions/*'
+engineer
+engineer = Agent.last
+engineer
+engineer
+engineer.conventions
+puts engineer.to_s
+engineer.conventions
+engineer
+engineer.conventions
+response = engineer.chat("Write a ruby method that will list all files in /Users/spencer/projects/cohort/lib/golems/conventions/"); puts response
+engineer.unsafe_eval(response)
+reload!
+engineer = Agent.last
+engineer.conventions
+response = engineer.chat("Write a ruby method that will list all files in /Users/spencer/projects/cohort/lib/golems/conventions/"); puts response
+engineer.follow_conventions?
+reload!
+engineer = Agent.last
+response = engineer.chat("Write a ruby method that will list all files in /Users/spencer/projects/cohort/lib/golems/conventions/"); puts response
+engineer.follow_conventions?
+engineer.follow_conventions?
+exit
+engineer = Agent.last
+response = engineer.chat("Write a ruby method that will list all files in /Users/spencer/projects/cohort/lib/golems/conventions/"); puts response
+reload!
+engineer = Agent.last
+response = engineer.chat("Write a ruby method that will list all files in /Users/spencer/projects/cohort/lib/golems/conventions/"); puts response
+reload!
+engineer = Agent.last
+response = engineer.chat("Write a ruby method that will list all files in /Users/spencer/projects/cohort/lib/golems/conventions/"); puts response
+reload!
+engineer = Agent.last
+response = engineer.chat("Write a ruby method that will list all files in /Users/spencer/projects/cohort/lib/golems/conventions/"); puts response
+engineer.follow_conventions?
+response = engineer.chat("Write a ruby method that will list all files in /Users/spencer/projects/cohort/lib/golems/conventions/"); puts response
+engineer.follow_conventions?
+engineer.conventions.build(name: "engineering/OnlyMethods").save
+engineer.conventions
+response = engineer.chat("Write a ruby method that will list all files in /Users/spencer/projects/cohort/lib/golems/conventions/"); puts response
+exit
+engineer = Agent.last
+engineer.convention
+engineer.conventions
+response = engineer.chat("Write a ruby method that will list all files in /Users/spencer/projects/cohort/lib/golems/conventions/"); puts response
+response = engineer.chat("Write a ruby method that will list all files in /Users/spencer/projects/cohort/lib/golems/conventions/"); puts response
+response = engineer.chat("Write a ruby method that will list all files in /Users/spencer/projects/cohort/lib/golems/conventions/"); puts response
+engineer.conventions.build(name: "engineering/Comments/CommentMethodSignatures").save
+response = engineer.chat("Write a ruby method that will list all files in /Users/spencer/projects/cohort/lib/golems/conventions/"); puts response
+exit
+engineer = Agent.last
+engineer.conventions
+response = engineer.chat("Write a ruby method that will list all files in /Users/spencer/projects/cohort/lib/golems/conventions/"); puts response
+engineer.follow_conventions?
+exit
+engineer = Agent.last
+engineer.conventions.build(name: "engineering/NoStubs").save
+response = engineer.chat("Write a ruby method that will list all files in /Users/spencer/projects/cohort/lib/golems/conventions/"); puts response
+engineer.follow_conventions?
+reload!
+response = engineer.chat("Write a ruby method that will list all files in /Users/spencer/projects/cohort/lib/golems/conventions/"); puts response
+engineer.to_s
+puts engineer.to_s
+reload!
+engineer = Agent.last
+puts engineer.to_s
+response = engineer.chat("Write a ruby method that will list all files in /Users/spencer/projects/cohort/lib/golems/conventions/"); puts response
+engineer.follow_conventions?
+Rainbow("test").color :green
+ap Rainbow("test").color :green
+p Rainbow("test").color :green
+puts Rainbow("test").color :green
+puts Rainbow("test").color :grey
+puts Rainbow("test").color :gray
+puts Rainbow("test").color :white
+puts Rainbow("test").color :darkgray
+puts Rainbow("test").color :gray
+puts Rainbow("test").color :dimgray
+puts Rainbow("test").dimgray
+reload!
+engineer = Agent.last
+response = engineer.chat("Write a ruby method that will list all files in /Users/spencer/projects/cohort/lib/golems/conventions/"); puts response
+response = engineer.chat("Write a ruby method that will list all files in /Users/spencer/projects/cohort/lib/golems/conventions/"); puts response
+engineer.follow_conventions?
+response = engineer.chat("Write a ruby method that will list all files in /Users/spencer/projects/cohort/lib/golems/conventions/"); puts response
+engineer.follow_conventions?
+reload!
+engineer = Agent.last
+response = engineer.chat("Write a ruby method that will list all files in /Users/spencer/projects/cohort/lib/golems/conventions/"); puts response
+engineer.follow_conventions?
+reload!
+reload!
+engineer.follow_conventions? "```ruby\
+# Returns an array of filenames in /Users/spencer/projects/cohort/lib/golems/conventions/\
+def list_files\
+  # implementation goes here\
+end\
+```"
+response
+incorrect = response
+engineer.follow_conventions? incorrect
+engineer = Agent.last
+response = engineer.chat("Write a ruby method that will list all files in /Users/spencer/projects/cohort/lib/golems/conventions/"); puts response
+engineer.follow_conventions?
+v = "NO, in all caps.\n\nSolution:\n```ruby\n# Public: list_all_files\n#\n# Lists all files in the specified directory.\n#\n# directory - A String representing the directory path.\n#\n# Returns an Array of filenames.\ndef list_all_files(directory)\n  # code goes here\nend\n```" 
+puts v
+reload!
+engineer = Agent.last
+response = engineer.chat("Write a ruby method that will list all files in /Users/spencer/projects/cohort/lib/golems/conventions/"); puts response
+reload!
+engineer = Agent.last
+response = engineer.chat("Write a ruby method that will list all files in /Users/spencer/projects/cohort/lib/golems/conventions/"); puts response
+puts engineer.follow_conventions?
+engineer.conventions
+Convention.find(3)
+Convention.find(3).delete
+engineer.conventions
+engineer.conventions.build(name: "engineering/Language/Python")
+response = engineer.chat("Write a method that will list all files in /Users/spencer/projects/cohort/lib/golems/conventions/"); puts response
+engineer.to_s
+puts engineer.to_s
+reload!
+engineer = Agent.last
+response = engineer.chat("Write a method that will list all files in /Users/spencer/projects/cohort/lib/golems/conventions/"); puts response
+Convention.all
+engineer.conventions.create(name: "engineering/Language/Ruby")
+response = engineer.chat("Write a method that will list all files in /Users/spencer/projects/cohort/lib/golems/conventions/"); puts response
+engineer.responses
+puts engineer.responses
+ap engineer.responses
+181 * 0.016
+181 * (0.016 * 1000)
+181 * (0.016 / 1000)
+90 * (0.016 / 1000)
+u = [{       "usage" => {\
+                "prompt_tokens" => 181,\
+            "completion_tokens" => 90,\
+                 "total_tokens" => 271\
+        }}, {       "usage" => {\
+                "prompt_tokens" => 181,\
+            "completion_tokens" => 90,\
+                 "total_tokens" => 271\
+        }}]
+u.map { |d| d["usage"]}
+u.map { |d| d["usage"]}.reduce(:+)
+u.map { |d| d["usage"]}.reduce(:+) 
+u.map { |d| d["usage"]}.inject{|memo, el| memo.merge( el ){|k, old_v, new_v| old_v + new_v}} 
+reload!
+engineer.print_costs
+engineer.reload
+engineer.print_costs
+engineer.costs
+engineer = Agent.last
+engineer.print_costs
+response = engineer.chat("Write a method that will list all files in /Users/spencer/projects/cohort/lib/golems/conventions/"); puts response
+engineer.print_costs
+engineer.costs
+reload!
+engineer = Agent.last
+response = engineer.chat("Write a method that will list all files in /Users/spencer/projects/cohort/lib/golems/conventions/"); puts response
+engineer.print_costs
+reload!
+engineer = Agent.last
+response = engineer.chat("Write a method that will list all files in /Users/spencer/projects/cohort/lib/golems/conventions/"); puts response
+engineer.print_costs
+puts engineer.print_costs
+engineer.follow_conventions?
+engineer.print_costs
+puts engineer.print_costs
+reload!
+engineer = Agent.last
+response = engineer.chat("Write a method that will list all files in /Users/spencer/projects/cohort/lib/golems/conventions/"); puts response
+engineer.print_costs
+puts engineer.print_costs
+reload!
+engineer = Agent.last
+response = engineer.chat("Write a method that will list all files in /Users/spencer/projects/cohort/lib/golems/conventions/"); puts response
+reload!
+response = engineer.chat("Write a method that will write GOAT 4 times to STDOUT"); puts response
+reload!
+engineer = Agent.last
+response = engineer.chat("Write a method that will write GOAT 4 times to STDOUT"); puts response
+reload!
+engineer = Agent.last
+response = engineer.chat("Write a method that will write GOAT 4 times to STDOUT"); puts response
+reload!
+engineer = Agent.last
+response = engineer.chat("Write a method that will parse and read yaml files"); puts response
+reload!
+engineer = Agent.last
+response = engineer.chat("Write a method that will parse and read yaml files"); puts response
+reload!
+engineer = Agent.last
+response = engineer.chat("Write a method that will parse and read yaml files"); puts response
+engineer.follow_conventions?
+reload!
+engineer.follow_conventions?
+reload!
+engineer = Agent.last
+response = engineer.chat("Write a method that will parse and read yaml files"); puts response
+engineer.follow_conventions?
+"GOAT YES".contains? /YES/
+"GOAT YES".includes? /YES/
+"GOAT YES".include? /YES/
+"GOAT YES" =~ /YES/
+reload!
+engineer = Agent.last
+response = engineer.chat("Write a method that will parse and read yaml files"); puts response
+engineer.follow_conventions?
+reload!
+engineer
+response = engineer.chat("Write a method that will parse and read yaml files"); puts response
+engineer.follow_conventions?
+engineer.follow_conventions? "def parse_yaml_file(file_path); #not implemented; end;"
+response = engineer.chat("Write a method that will parse and read yaml files"); puts response
+engineer.unsafe_eval
+engineer.unsafe_eval response
+engineer.unsafe_eval engineer.last_response.dig("choices", 0, "message", "content") )
+engineer.unsafe_eval engineer.last_response.dig("choices", 0, "message", "content") 
+parse_yaml_file
+engineer.parse_yaml_file
+engineer.parse_yaml_file("#{Rails.root}/lib/conventions/engineering.yml")
+engineer.parse_yaml_file("#{Rails.root}/lib/conventions/engineering.yml")
+engineer.parse_yaml_file("#{Rails.root}/lib/golems/conventions/engineering.yml")
+eit
+exit

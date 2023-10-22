@@ -1,0 +1,10 @@
+{
+  "name": "cohort",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Spencer Markowski <spencer@theablefew.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "litegraph.js": "^0.7.14"
+  }
+}

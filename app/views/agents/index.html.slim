@@ -1,0 +1,11 @@
+p style="color: green" = notice
+
+h1 Agents
+
+#agents
+  - @agents.each do |agent|
+    == render agent
+    p
+      = link_to "Show this agent", agent
+
+= link_to "New agent", new_agent_path

@@ -1,0 +1,109 @@
+p.text-success = notice
+
+.d-flex.justify-content-between.align-items-center.mb-3
+  .d-flex
+    h1.display-6 = @project.title
+    / == render @project
+
+  .d-flex.gap-1
+    / = link_to "Back to projects", projects_path, class: 'me-2'
+    div
+      = link_to edit_project_path(@project), class: "btn border-0 bg-light bg-secondary-hover" do 
+        i.mdi.mdi-hammer-wrench
+
+.row data= { controller: "chat" } 
+    / Agents column
+    .col-4 
+
+    / Chat column
+    .col-8
+        .col-12
+            / Fixed Chat Input
+            .card.flex-fill
+                .card-body.mb-1.pb-0
+                    = simple_form_for(:chat, html: {class: 'd-flex justify-content-between gap-2'}) do |f|
+                        .d-flex.flex-fill
+                            = f.input :message,
+                             label: false,
+                             placeholder: "What should your golems do?",
+                             input_html: { data: { action: "keydown->chat#send" } },
+                             wrapper_html: { class: "flex-grow-1" }
+                             
+
+                        div
+                            = f.submit "Send",
+                                class: "btn btn-primary",
+                                data: { action: "click->chat#send" }
+                .card-footer.my-0.pt-0
+                    .row.mb-0.pb-0
+                        .d-flex.justify-content-end.align-items-center.text-secondary
+                            span
+                                = @project.available_agents.first.name
+                            i.mdi.mdi-menu-down.fs-4
+
+        / Cost of Chat
+        .col-12
+            ul.text-secondary.text-opacity-50.list-inline.d-flex.justify-content-center.align-items-center.mb-4.fw-lighter
+                li.list-inline-item   
+                    strong prompt: 
+                    | $0.002
+                li.list-inline-item   
+                    strong completion: 
+                    | $0.001
+                li.list-inline-item   
+                    strong total: 
+                    | $0.003
+                li.list-inline-item
+                    = link_to '', class: 'btn btn-sm btn-outline-light text-secondary' do 
+                        i.mdi.mdi-alarm-light-off
+
+        / Scrollable Chat History
+        .col-12
+            .row
+                .col-1
+                    h5.text-end.ms-n5.mt-2.me-2.card-title User
+                .col-11
+                    .card.flex-fill
+                        .card-body
+                            p Write a method that will parse and read yaml files
+        .col-12
+            .row
+                .col-1
+                    h5.text-end.ms-n5.mt-2.me-2.card-title = @project.available_agents.first.name
+                .col-11
+                    .card.flex-fill
+                        .card-body
+                            = markdown @response
+
+        / Reflections
+
+        .d-flex.justify-content-center
+            .d-flex.align-items-center.mb-2.fw-medium.ms-5.text-secondary.text-opacity-50 
+                span Reflections
+                i.mdi.mdi-menu-down.fs-4
+
+
+        .col-10.offset-2
+            .row
+                .col-12
+                    .card.flex-fill.bg-body-tertiary
+                        .card-body.opacity-50
+                            = markdown @response
+
+        .col-10.offset-2
+            .row
+                .col-12
+                    .card.flex-fill.bg-body-tertiary
+                        .card-body.opacity-50
+                            = markdown @response
+
+        .col-12
+            .row
+                .col-1
+                    h5.text-end.ms-n5.mt-2.me-2.card-title = @project.available_agents.last.name
+                .col-11
+                    .card.flex-fill
+                        .card-body
+                            strong LGTM 
+
+

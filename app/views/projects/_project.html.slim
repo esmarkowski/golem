@@ -1,0 +1,6 @@
+div id="#{dom_id project}"
+    h1.mb-5 = project.title
+
+    .d-flex.grid.gap-3
+        - Agent.all.each do |agent|
+            = render agent

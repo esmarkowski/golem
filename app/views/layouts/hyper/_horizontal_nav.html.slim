@@ -1,0 +1,213 @@
+/! ========== Horizontal Menu Start ==========
+.topnav
+  .container-fluid
+    nav.navbar.navbar-dark.navbar-expand-lg.topnav-menu
+      #topnav-menu-content.collapse.navbar-collapse
+        ul.navbar-nav
+          = render 'topnav/nav_item'
+          li.nav-item.dropdown
+            a#topnav-apps.nav-link.dropdown-toggle.arrow-none aria-expanded="false" aria-haspopup="true" data-bs-toggle="dropdown" href="#" role="button" 
+              i.uil-apps.me-1
+              | Apps
+            .arrow-down
+            .dropdown-menu aria-labelledby="topnav-apps" 
+              a.dropdown-item href="apps-calendar.html"  Calendar
+              a.dropdown-item href="apps-chat.html"  Chat
+              .dropdown
+                a#topnav-crm.dropdown-item.dropdown-toggle.arrow-none aria-expanded="false" aria-haspopup="true" data-bs-toggle="dropdown" href="#" role="button" 
+                  | CRM
+                .arrow-down
+                .dropdown-menu aria-labelledby="topnav-crm" 
+                  a.dropdown-item href="crm-projects.html"  Project
+                  a.dropdown-item href="crm-orders-list.html"  Orders List
+                  a.dropdown-item href="crm-clients.html"  Clients
+                  a.dropdown-item href="crm-management.html"  Management
+              .dropdown
+                a#topnav-ecommerce.dropdown-item.dropdown-toggle.arrow-none aria-expanded="false" aria-haspopup="true" data-bs-toggle="dropdown" href="#" role="button" 
+                  | Ecommerce
+                .arrow-down
+                .dropdown-menu aria-labelledby="topnav-ecommerce" 
+                  a.dropdown-item href="apps-ecommerce-products.html"  Products
+                  a.dropdown-item href="apps-ecommerce-products-details.html"  Products Details
+                  a.dropdown-item href="apps-ecommerce-orders.html"  Orders
+                  a.dropdown-item href="apps-ecommerce-orders-details.html"  Order Details
+                  a.dropdown-item href="apps-ecommerce-customers.html"  Customers
+                  a.dropdown-item href="apps-ecommerce-shopping-cart.html"  Shopping Cart
+                  a.dropdown-item href="apps-ecommerce-checkout.html"  Checkout
+                  a.dropdown-item href="apps-ecommerce-sellers.html"  Sellers
+              .dropdown
+                a#topnav-email.dropdown-item.dropdown-toggle.arrow-none aria-expanded="false" aria-haspopup="true" data-bs-toggle="dropdown" href="#" role="button" 
+                  | Email
+                .arrow-down
+                .dropdown-menu aria-labelledby="topnav-email" 
+                  a.dropdown-item href="apps-email-inbox.html"  Inbox
+                  a.dropdown-item href="apps-email-read.html"  Read Email
+              .dropdown
+                a#topnav-project.dropdown-item.dropdown-toggle.arrow-none aria-expanded="false" aria-haspopup="true" data-bs-toggle="dropdown" href="#" role="button" 
+                  | Projects
+                .arrow-down
+                .dropdown-menu aria-labelledby="topnav-project" 
+                  a.dropdown-item href="apps-projects-list.html"  List
+                  a.dropdown-item href="apps-projects-details.html"  Details
+                  a.dropdown-item href="apps-projects-gantt.html"  Gantt
+                  a.dropdown-item href="apps-projects-add.html"  Create Project
+              a.dropdown-item href="apps-social-feed.html"  Social Feed
+              .dropdown
+                a#topnav-tasks.dropdown-item.dropdown-toggle.arrow-none aria-expanded="false" aria-haspopup="true" data-bs-toggle="dropdown" href="#" role="button" 
+                  | Tasks
+                .arrow-down
+                .dropdown-menu aria-labelledby="topnav-tasks" 
+                  a.dropdown-item href="apps-tasks.html"  List
+                  a.dropdown-item href="apps-tasks-details.html"  Details
+                  a.dropdown-item href="apps-kanban.html"  Kanban Board
+              a.dropdown-item href="apps-file-manager.html"  File Manager
+          li.nav-item.dropdown
+            a#topnav-pages.nav-link.dropdown-toggle.arrow-none aria-expanded="false" aria-haspopup="true" data-bs-toggle="dropdown" href="#" role="button" 
+              i.uil-copy-alt.me-1
+              | Pages
+            .arrow-down
+            .dropdown-menu aria-labelledby="topnav-pages" 
+              .dropdown
+                a#topnav-auth.dropdown-item.dropdown-toggle.arrow-none aria-expanded="false" aria-haspopup="true" data-bs-toggle="dropdown" href="#" role="button" 
+                  | Authenitication
+                .arrow-down
+                .dropdown-menu aria-labelledby="topnav-auth" 
+                  a.dropdown-item href="pages-login.html"  Login
+                  a.dropdown-item href="pages-login-2.html"  Login 2
+                  a.dropdown-item href="pages-register.html"  Register
+                  a.dropdown-item href="pages-register-2.html"  Register 2
+                  a.dropdown-item href="pages-logout.html"  Logout
+                  a.dropdown-item href="pages-logout-2.html"  Logout 2
+                  a.dropdown-item href="pages-recoverpw.html"  Recover Password
+                  a.dropdown-item href="pages-recoverpw-2.html"  Recover Password 2
+                  a.dropdown-item href="pages-lock-screen.html"  Lock Screen
+                  a.dropdown-item href="pages-lock-screen-2.html"  Lock Screen 2
+                  a.dropdown-item href="pages-confirm-mail.html"  Confirm Mail
+                  a.dropdown-item href="pages-confirm-mail-2.html"  Confirm Mail 2
+              .dropdown
+                a#topnav-error.dropdown-item.dropdown-toggle.arrow-none aria-expanded="false" aria-haspopup="true" data-bs-toggle="dropdown" href="#" role="button" 
+                  | Error
+                .arrow-down
+                .dropdown-menu aria-labelledby="topnav-error" 
+                  a.dropdown-item href="pages-404.html"  Error 404
+                  a.dropdown-item href="pages-404-alt.html"  Error 404-alt
+                  a.dropdown-item href="pages-500.html"  Error 500
+              a.dropdown-item href="pages-starter.html"  Starter Page
+              a.dropdown-item href="pages-preloader.html"  With Preloader
+              a.dropdown-item href="pages-profile.html"  Profile
+              a.dropdown-item href="pages-profile-2.html"  Profile 2
+              a.dropdown-item href="pages-invoice.html"  Invoice
+              a.dropdown-item href="pages-faq.html"  FAQ
+              a.dropdown-item href="pages-pricing.html"  Pricing
+              a.dropdown-item href="pages-maintenance.html"  Maintenance
+              a.dropdown-item href="pages-timeline.html"  Timeline
+              a.dropdown-item href="landing.html"  Landing
+          li.nav-item.dropdown
+            a#topnav-components.nav-link.dropdown-toggle.arrow-none aria-expanded="false" aria-haspopup="true" data-bs-toggle="dropdown" href="#" role="button" 
+              i.uil-package.me-1
+              | Components
+            .arrow-down
+            .dropdown-menu aria-labelledby="topnav-components" 
+              a.dropdown-item href="widgets.html"  Widgets
+              .dropdown
+                a#topnav-ui-kit.dropdown-item.dropdown-toggle.arrow-none aria-expanded="false" aria-haspopup="true" data-bs-toggle="dropdown" href="#" role="button" 
+                  | Base UI 1
+                .arrow-down
+                .dropdown-menu aria-labelledby="topnav-ui-kit" 
+                  a.dropdown-item href="ui-accordions.html"  Accordions
+                  a.dropdown-item href="ui-alerts.html"  Alerts
+                  a.dropdown-item href="ui-avatars.html"  Avatars
+                  a.dropdown-item href="ui-badges.html"  Badges
+                  a.dropdown-item href="ui-breadcrumb.html"  Breadcrumb
+                  a.dropdown-item href="ui-buttons.html"  Buttons
+                  a.dropdown-item href="ui-cards.html"  Cards
+                  a.dropdown-item href="ui-carousel.html"  Carousel
+                  a.dropdown-item href="ui-dropdowns.html"  Dropdowns
+                  a.dropdown-item href="ui-embed-video.html"  Embed Video
+                  a.dropdown-item href="ui-grid.html"  Grid
+                  a.dropdown-item href="ui-list-group.html"  List Group
+              .dropdown
+                a#topnav-ui-kit2.dropdown-item.dropdown-toggle.arrow-none aria-expanded="false" aria-haspopup="true" data-bs-toggle="dropdown" href="#" role="button" 
+                  | Base UI 2
+                .arrow-down
+                .dropdown-menu aria-labelledby="topnav-ui-kit2" 
+                  a.dropdown-item href="ui-modals.html"  Modals
+                  a.dropdown-item href="ui-notifications.html"  Notifications
+                  a.dropdown-item href="ui-offcanvas.html"  Offcanvas
+                  a.dropdown-item href="ui-placeholders.html"  Placeholders
+                  a.dropdown-item href="ui-pagination.html"  Pagination
+                  a.dropdown-item href="ui-popovers.html"  Popovers
+                  a.dropdown-item href="ui-progress.html"  Progress
+                  a.dropdown-item href="ui-ribbons.html"  Ribbons
+                  a.dropdown-item href="ui-spinners.html"  Spinners
+                  a.dropdown-item href="ui-tabs.html"  Tabs
+                  a.dropdown-item href="ui-tooltips.html"  Tooltips
+                  a.dropdown-item href="ui-typography.html"  Typography
+              .dropdown
+                a#topnav-extended-ui.dropdown-item.dropdown-toggle.arrow-none aria-expanded="false" aria-haspopup="true" data-bs-toggle="dropdown" href="#" role="button" 
+                  | Extended UI
+                .arrow-down
+                .dropdown-menu aria-labelledby="topnav-extended-ui" 
+                  a.dropdown-item href="extended-dragula.html"  Dragula
+                  a.dropdown-item href="extended-range-slider.html"  Range Slider
+                  a.dropdown-item href="extended-ratings.html"  Ratings
+                  a.dropdown-item href="extended-scrollbar.html"  Scrollbar
+                  a.dropdown-item href="extended-scrollspy.html"  Scrollspy
+                  a.dropdown-item href="extended-treeview.html"  Treeview
+              .dropdown
+                a#topnav-forms.dropdown-item.dropdown-toggle.arrow-none aria-expanded="false" aria-haspopup="true" data-bs-toggle="dropdown" href="#" role="button" 
+                  | Forms
+                .arrow-down
+                .dropdown-menu aria-labelledby="topnav-forms" 
+                  a.dropdown-item href="form-elements.html"  Basic Elements
+                  a.dropdown-item href="form-advanced.html"  Form Advanced
+                  a.dropdown-item href="form-validation.html"  Validation
+                  a.dropdown-item href="form-wizard.html"  Wizard
+                  a.dropdown-item href="form-fileuploads.html"  File Uploads
+                  a.dropdown-item href="form-editors.html"  Editors
+              .dropdown
+                a#topnav-charts.dropdown-item.dropdown-toggle.arrow-none aria-expanded="false" aria-haspopup="true" data-bs-toggle="dropdown" href="#" role="button" 
+                  | Charts
+                .arrow-down
+                .dropdown-menu aria-labelledby="topnav-charts" 
+                  a.dropdown-item href="charts-chartjs.html"  Chartjs
+                  a.dropdown-item href="charts-brite.html"  Britecharts
+                  a.dropdown-item href="charts-apex-line.html"  Apex Charts
+                  a.dropdown-item href="charts-sparkline.html"  Sparklines
+              .dropdown
+                a#topnav-tables.dropdown-item.dropdown-toggle.arrow-none aria-expanded="false" aria-haspopup="true" data-bs-toggle="dropdown" href="#" role="button" 
+                  | Tables
+                .arrow-down
+                .dropdown-menu aria-labelledby="topnav-tables" 
+                  a.dropdown-item href="tables-basic.html"  Basic Tables
+                  a.dropdown-item href="tables-datatable.html"  Data Tables
+              .dropdown
+                a#topnav-icons.dropdown-item.dropdown-toggle.arrow-none aria-expanded="false" aria-haspopup="true" data-bs-toggle="dropdown" href="#" role="button" 
+                  | Icons
+                .arrow-down
+                .dropdown-menu aria-labelledby="topnav-icons" 
+                  a.dropdown-item href="icons-remixicons.html"  Remix Icons
+                  a.dropdown-item href="icons-mdi.html"  Material Design
+                  a.dropdown-item href="icons-unicons.html"  Unicons
+              .dropdown
+                a#topnav-maps.dropdown-item.dropdown-toggle.arrow-none aria-expanded="false" data-bs-toggle="dropdown" href="#" role="button" 
+                  | Maps
+                .arrow-down
+                .dropdown-menu aria-labelledby="topnav-maps" 
+                  a.dropdown-item href="maps-google.html"  Google Maps
+                  a.dropdown-item href="maps-vector.html"  Vector Maps
+          li.nav-item.dropdown
+            a#topnav-layouts.nav-link.dropdown-toggle.arrow-none aria-expanded="false" aria-haspopup="true" data-bs-toggle="dropdown" href="#" role="button" 
+              i.uil-window.me-1
+              | Layouts
+            .arrow-down
+            .dropdown-menu aria-labelledby="topnav-layouts" 
+              a.dropdown-item href="layouts-horizontal.html" target="_blank"  Horizontal
+              a.dropdown-item href="layouts-vertical.html" target="_blank"  Vertical
+              a.dropdown-item href="layouts-detached.html" target="_blank"  Detached
+              a.dropdown-item href="layouts-full.html" target="_blank"  Full
+              a.dropdown-item href="layouts-hover.html" target="_blank"  Hover Menu
+              a.dropdown-item href="layouts-compact.html" target="_blank"  Compact Menu
+              a.dropdown-item href="layouts-icon-view.html" target="_blank"  Icon View
+/! ========== Horizontal Menu End ==========
+

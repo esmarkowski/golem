@@ -1,0 +1,16 @@
+/! Leftbar User
+#user-options.leftbar-user.d-flex.fixed-bottom.bottom-0.justify-content-center.mb-0
+  .dropend
+    = link_to '#', class: 'dropdown-toggle',id: "user-dropdown", role: :button, data: {toggle: 'dropdown', "bs-toggle": :dropdown}, aria: {haspopup: true, expanded: false} do
+      = image_tag gravatar_image_url(current_user.email), class: 'rounded-circle shadow-sm', height: 45
+      span.leftbar-user-name.pe-2= current_user.name || current_user.email
+    .dropdown-menu.py-0
+      .popover-arrow
+      = link_to destroy_user_session_path,
+        data: { turbo_method: :delete  }, 
+        class: 'dropdown-item' do
+          .fa-duotone.fa-right-from-bracket.pe-1
+          | Sign Out
+      = link_to '', class: 'dropdown-item' do
+        .fa-duotone.fa-sliders.pe-1
+        | Settings

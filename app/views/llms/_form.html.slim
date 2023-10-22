@@ -1,0 +1,16 @@
+= simple_form_for(@llm) do |form|
+  - if @llm.errors.any?
+    div style="color: red"
+      h2 = "#{pluralize(@llm.errors.count, "error")} prohibited this llm from being saved:"
+      ul
+        - @llm.errors.each do |error|
+          li = error.full_message
+
+  div 
+    = form.input :name
+    = form.input :provider
+    = form.input :api_key
+    = form.input :api_base
+
+  div
+    = form.submit

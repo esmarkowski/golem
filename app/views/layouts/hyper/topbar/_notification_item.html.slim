@@ -1,0 +1,15 @@
+= link_to url, class: 'dropdown-item p-0 notify-item card unread-noti shadow-none mb-2' do
+
+  .card-body
+    .d-flex.align-items-center
+      .flex-shrink-0
+        .notify-icon class="bg-#{level}"
+          span class="#{icon}"
+
+      .flex-grow-1.ms-2
+        h5.noti-item-title.fw-semibold.font-14
+          = title
+        / small.fw-normal.text-muted= "#{time_ago_in_words(notification_at)} ago"
+
+        small.noti-item-subtitle.text-muted 
+            = message.html_safe
