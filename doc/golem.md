@@ -1,8 +1,7 @@
 <p align="center">
-
-![Golem](../app/assets/images/logo.png)
-
+<img src="../app/assets/images/logo.png" width="40%">
 </p>
+
 
 # Golem
 
