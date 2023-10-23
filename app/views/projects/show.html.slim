@@ -6,12 +6,14 @@ p.text-success = notice
   .d-flex.gap-1
     = link_to "Back to projects", projects_path, class: 'me-2'
     div
+      = link_to project_chat_path(@project), class: "btn border-0 bg-light bg-success-hover" do 
+        i.mdi.mdi-script-text-play.fs-4
+    div
       = link_to edit_project_path(@project), class: "btn border-0 bg-light bg-secondary-hover" do 
-        i.mdi.mdi-lead-pencil
+        i.mdi.mdi-lead-pencil.fs-4
 
     = button_to @project, method: :delete, class: "btn border-0 bg-light bg-danger-hover", data: { turbo_confirm: "Are you sure?" } do 
-      i.mdi.mdi-trash-can
+      i.mdi.mdi-trash-can.fs-4
 
 / div.w-auto[data-controller="projects"]
 /   canvas#agent-graph width="1500" height="720"
-

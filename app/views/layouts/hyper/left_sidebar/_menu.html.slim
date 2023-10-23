@@ -2,13 +2,13 @@
 / button.bg-transparent.btn.btn-primary-sm-hover.p-0 data-bs-placement="right" data-bs-toggle="tooltip" title=("Show Full Sidebar") type="button" 
 /   i.ri-checkbox-blank-circle-line.align-middle
 /! Sidebar -left
-#leftside-menu-container.h-100.mt-2 data-simplebar="" 
+#leftside-menu-container data-simplebar="" 
   /! - Sidemenu
   ul.side-nav.pt-3
-    - if namespace == 'admin' || current_user.admin?
-      = render 'admin/includes/nav'
-    - else
-      = render 'includes/nav'    
+    / - if namespace == 'admin' || current_user.admin?
+    /   = render 'admin/includes/nav'
+    / - else
+    /   = render 'includes/nav'    
 
     / li.side-nav-title.side-nav-item Navigation
     / = render 'layouts/hyper/left_sidebar/side_nav_item', title: "Dashboard", icon: "ri-dashboard-line", link: root_path

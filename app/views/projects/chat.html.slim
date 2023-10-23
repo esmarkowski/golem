@@ -1,22 +1,24 @@
 p.text-success = notice
 
-.d-flex.justify-content-between.align-items-center.mb-3
-  .d-flex
-    h1.display-6 = @project.title
-    / == render @project
 
-  .d-flex.gap-1
-    / = link_to "Back to projects", projects_path, class: 'me-2'
-    div
-      = link_to edit_project_path(@project), class: "btn border-0 bg-light bg-secondary-hover" do 
-        i.mdi.mdi-hammer-wrench
 
-.row data= { controller: "chat" } 
+.row 
     / Agents column
     .col-4 
 
+
     / Chat column
-    .col-8
+    .col-8 data= { controller: "chat" } 
+        .d-flex.justify-content-between.align-items-center.mb-3
+            .d-flex
+                h1.display-6 = @project.title
+                / == render @project
+
+            .d-flex.gap-1
+                / = link_to "Back to projects", projects_path, class: 'me-2'
+                div
+                = link_to project_path(@project), class: "btn border-0 bg-light bg-secondary-hover" do 
+                    i.mdi.mdi-hammer-wrench
         .col-12
             / Fixed Chat Input
             .card.flex-fill
@@ -66,6 +68,20 @@ p.text-success = notice
                     .card.flex-fill
                         .card-body
                             p Write a method that will parse and read yaml files
+
+        .col-12
+            .row
+                .col-1
+                    h5.text-end.ms-n5.mt-2.me-2.card-title Coordinator
+                .col-11
+                    .card.flex-fill.ribbon-box
+                        .card-body
+                            .ribbon.ribbon-info.float-end
+                                i.mdi.mdi-access-point.me-1
+                                | Planning
+
+                            | The user would like to parse yaml files. The language used should be Ruby.
+ 
         .col-12
             .row
                 .col-1
@@ -73,7 +89,12 @@ p.text-success = notice
                 .col-11
                     .card.flex-fill
                         .card-body
-                            = markdown @response
+                            .d-flex.float-end
+                                = link_to '', class: 'btn btn-sm btn-outline-light text-secondary' do 
+                                    i.mdi.mdi-brain.text-muted
+                            .d-flex
+                                = markdown @response
+                            
 
         / Reflections
 

@@ -1,5 +1,12 @@
 /! ========== Left Sidebar Start ==========
-.leftside-menu
-  = render 'layouts/hyper/left_sidebar/logo'
-  = render 'layouts/hyper/left_sidebar/menu'
+.offcanvas.offcanvas-start.p-0.shadow data-controller="left-sidebar" data-action="hotkeys:toggleLeftSidebar@window->left-sidebar#toggle"
+  .d-flex.align-items-center.bg-secondary.p-3.offcanvas-header
+    h5.text-white.m-0 Golems
+    button.btn-close.btn-close-white.ms-auto aria-label="Close" data-bs-dismiss="offcanvas" type="button" data-action="click->left-sidebar#close" data-right-sidebar-target="closeBtn" 
+
+  / = render 'layouts/hyper/left_sidebar/logo'
+  .offcanvas-body.p-0
+    = render 'layouts/hyper/left_sidebar/menu'
+
+  .offcanvas-footer.border-top.p-3.text-center
 /! ========== Left Sidebar End ==========

@@ -3,3 +3,5 @@ import "@hotwired/turbo-rails";
 import "controllers";
 import "litegraph.js";
 import "choices.js";
+import "pagemap";
+import "hotkeys-js";

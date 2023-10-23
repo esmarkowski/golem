@@ -10,7 +10,7 @@ html data-layout-mode="fluid" data-layout="topnav" data-layout-position="fluid" 
     = stylesheet_link_tag "application", "data-turbo-track": "reload"
     = javascript_importmap_tags
 
-  body.preload.default 
+  body.preload.default data-controller="hotkeys"
     / = modal(modal_classes: 'large') do
     /   #timesheet_form_modal
     / = system_alert_box
@@ -22,7 +22,6 @@ html data-layout-mode="fluid" data-layout="topnav" data-layout-position="fluid" 
 
       = render 'layouts/hyper/topbar'
 
-      / = render 'layouts/hyper/left_sidebar'
 
       .content-page
         .content[data-controller="#{content_for?(:content_controller) ? yield(:content_controller) : ''}"]
@@ -35,9 +34,11 @@ html data-layout-mode="fluid" data-layout="topnav" data-layout-position="fluid" 
               = yield
         / = render 'layouts/hyper/footer'
 
-    / = render 'layouts/hyper/right_sidebar'
+    = render 'layouts/hyper/right_sidebar'
+    = render 'layouts/hyper/left_sidebar'
     / = render 'layouts/hyper/components/toasts'
     - if content_for?(:modal)
       = yield(:modal)
       
     / = javascript_pack_tag 'hyper', data: {turbo_track: :reload, turbo_eval: false}
+    .offcanvas-backdrop.fade

@@ -50,6 +50,41 @@ These are the workflows designed to solve a problem using your Golems
 ### Budgets
 Set budgets for individual Golems and Rituals
 
+# Golems
+
+## Command Comprehension
+Extract and interperet implied commands from the user.  
+
+    Assistant: Here is the code as JSON
+    ```json
+        {"goat": {"pain": 1}}
+    ```
+
+    User: Please return code pretty formated.
+
+In this example the user's message should be interpreted as a command and added to the golem's convention set or the global conventions. A function call can be returned to internally add this to the golem's context. 
+
+
+    System: 
+        ```yaml
+            userCommands/prettyPrint:
+                - Please return code pretty formated
+        ```
+
+
+
+
+
+# Context Minimap 
+
+You can scrub through memory layers and full logs via the minimap to adjust the context window. If you'd only like to select messages from a specific golem you can filter the layers to only include messages from specific sources. 
+
+You can summarize and commit messages to memory that fall within the range to produce higher level instructions over time. 
+
+ 
+
+
+
 
 
 
